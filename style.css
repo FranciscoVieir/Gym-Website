@@ -1,0 +1,589 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.3s linear;
+  outline: none;
+}
+
+/* *.. selection {
+  background-color: #B6C649;
+  color: white;
+} */
+
+body {
+  font-family: 'Merriweather', serif;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),
+  url(/images/gymMenu.jpg);
+  background-position: center;
+  background-size: cover;
+  clip-path: polygon(100% 0, 100% 91%, 49% 100%, 0 89%, 0 0);
+}
+
+nav {
+  padding: 2% 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #FFFFFF;
+}
+
+nav .logo {
+  font-size: 2.8rem;
+  cursor: pointer;
+}
+
+nav .logo span {
+  color: #B6C649;
+}
+
+nav .links {
+  padding-left: 0;
+}
+
+nav .links li {
+  display: inline-block;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+
+nav .links li a {
+  color: white;
+}
+
+.links .active {
+  color: #B6C649;
+}
+
+nav .links li a:hover {
+  color: #B6C649;
+}
+
+header .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+header .content h1 {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  color: white;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  background-color: transparent;
+  border: 0.3rem solid #B6C649;
+  color: #B6C649;
+  margin-top: 1.8rem;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: #B6C649;
+  color: white;
+}
+
+nav .open,.close{
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #B6C649;
+  display: none;
+}
+
+header .content h1 {
+  font-size: 2.3rem;
+}
+
+.about .row {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2% 6%;
+}
+
+.about .row .image {
+  flex: 1 1 20rem;
+  padding: 1rem;
+}
+
+.about .row .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about .row .content {
+  flex: 1 1 30rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.about .row .content h1 {
+  font-size: 2rem;
+  color: #B6C649;
+  margin-bottom: 2rem;
+}
+
+.about .row .content p {
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.services {
+  min-height: 100vh;
+  text-align: center;
+  padding: 2% 6%;
+}
+
+.services h1 {
+  font-size: 2.1rem;
+  padding: 0.5rem;
+  display: inline-block;
+  color: #B6C649;
+  border-bottom: 0.3rem solid #B6C649;
+  margin-bottom: 1.8rem;
+}
+
+.services .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.services .container .box {
+  width: 22rem;
+  height: 23rem;
+  margin: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.services .container .box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.services .container .box .info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transform-origin: bottom;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.services .container .box:hover .info {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.services .container .box .info h3 {
+  font-size: 2rem;
+  color: #B6C649;
+  margin-top: 4rem;
+  margin-bottom: 1.2rem;
+} 
+
+.services .container .box .info p {
+  line-height: 2;
+  color: #FFF;
+  font-size: 0.7rem;
+  padding: 0.1rem;
+  margin-bottom: 1.2rem;
+}
+
+.trainers {
+  min-height: 100vh;
+  text-align: center;
+  padding: 2% 6%;
+}
+
+.trainers h1{
+  font-size: 1.7rem;
+  padding: 0.5rem;
+  display: inline-block;
+  color: #B6C649;
+  border-bottom: 0.3rem solid #B6C649;
+  margin-bottom: 1.8rem;
+}
+
+.trainers p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.trainers .items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.trainers .items .item {
+  height: 30rem;
+  width: 15rem;
+  margin: 4rem 0.3rem;
+}
+
+.trainers .item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+.trainers .item .inner {
+  position: relative;
+  z-index: 9999;
+  padding: 0.1rem;
+}
+
+.trainers .item:hover {
+  transform: -20px;
+}
+
+.trainers .item .inner .info {
+  background-color: #B6C649;
+  padding: 1rem 0.6rem;
+  border-radius: 0.6rem;
+  margin-top: -2.5rem;
+}
+ 
+.trainers .item:hover .info {
+  transform: translateY(-30px);
+}
+
+.trainers .item .inner .info h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #000;
+}
+
+.trainers .item .inner .info .links {
+  margin-top: 0.3rem;
+}
+
+.trainers .item .inner .info .links a {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-color: #FFF;
+  border-radius: 50%;
+  color: #B6C649;
+  text-align: center;
+  line-height: 0.2rem;
+  font-size: 1.1rem;
+}
+
+.trainers .item .inner .info .links a i {
+  margin-top: 7px;
+}
+
+.trainers .item .inner .info .links a:hover {
+  box-shadow: 0 0 .6rem #000;
+}
+
+.pricing_table {
+  min-height: 100vh;
+  padding: 2% 6%;
+  text-align: center;
+}
+
+.pricing_table h1 {
+  font-size: 1.7rem;
+  padding: 0.5rem;
+  display: inline-block;
+  color: #B6C649;
+  border-bottom: 0.3rem solid #B6C649;
+  margin-bottom: 2rem;
+}
+
+.pricing_table .pricing_card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.pricing_card .price_box {
+  width: 24rem;
+  box-shadow: 2px 2px 6px #000;
+  margin-bottom: 4rem;
+}
+
+.pricing_card .price_box:hover {
+  transform: translateY(-30px);
+}
+
+.price_box h2 {
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+  background-color: #B6C649;
+  padding: 1rem;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.price_box h3 {
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: #B6C649;
+}
+
+.price_box h3 sup {
+  font-size: 1rem;
+}
+
+.price_box h3 span {
+  font-size: 1.7rem;
+}
+
+.price_box p {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.price_box ul {
+  padding: 2rem;
+}
+
+.price_box ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.price_box .btn {
+  margin-bottom: 2rem;
+}
+
+.register {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(/images/register.jpg);
+  min-height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+
+.register h1 {
+  font-size: 1.7rem;
+  padding: 0.5rem;
+  display: inline-block;
+  color: #B6C649;
+  border-bottom: 0.3rem solid #B6C649;
+  margin-bottom: 2rem;
+}
+
+.register form {
+  padding: 2% 6%;
+  margin: 0 auto;
+}
+
+.register form .input_box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.register form .input_box input, textarea {
+  height: 2rem;
+  width: 30%;
+  background-color: transparent;
+  color: #ddd;
+  padding: 0.4rem 0.2rem;
+  margin: 1rem 0;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+}
+
+.register form textarea{
+  height: 8rem;
+  width: 100%;
+  resize: none;
+}
+
+footer {
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  background-color: #000;
+  font-size: 0.8rem;
+}
+
+@media (max-width:850px) {
+  nav .links {
+    height: 13rem;
+    width: 24%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    border-radius: 1.2rem;
+    background-color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+  }
+  nav .links li {
+    font-size: 0.8rem;
+    margin: 0.5rem;
+  }
+  nav .links li a{
+    color: black;
+  }
+  nav .open,nav .links .close {
+    display: block;
+    position: absolute;
+    top: 1.8rem;
+    right: 1.6rem;
+  }
+}
+
+@media (max-width:1100px) {
+  .register form .input_box input {
+    width: 100%;
+  }
+    .trainers .items .item {
+      height: 13rem;
+      width: 8rem;
+      margin: 2rem 0.3rem;
+    }
+
+        .pricing_table h1 {
+          font-size: 1.7rem;
+          margin-top: 5rem;
+          margin-bottom: 3rem;
+        }
+        .price_box h2 {
+          font-size: 1rem;
+        }
+
+        .pricing_card .price_box {
+          width: 12rem;
+        }
+}
+
+@media (max-width: 1000px) {
+  .services .container .box {
+    height: 15rem;
+    width: 30%;
+  }
+    .services .container .box .info h3 {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+   }
+        
+    .services .container .box .info p {
+      line-height: 1;
+      color: #FFF;
+      font-size: 0.7rem;
+      padding: 0.1rem;
+      margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+  .services .container .box {
+    height: 15rem;
+    width: 44%;
+  }
+
+  .services .container .box .info h3 {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .services .container .box .info p {
+    /* line-height: 1; */
+    color: #FFF;
+    font-size: 10px;
+    padding: 0.1rem;
+    margin-bottom: 1rem;
+  }
+  .services .container .box .info .btn {
+  padding: 0.5rem 1.2rem;
+  background-color: transparent;
+  border: 0.2rem solid #B6C649;
+  margin-top: 1.4rem;
+  font-size: 0.7rem;
+   
+  }
+    .trainers .items .item {
+      height: 14rem;
+      width: 8rem;
+      margin: 4rem 0.3rem;
+    }
+    
+        .trainers .item .inner .info {
+          padding: 1rem 0.2rem;
+          border-radius: 0.6rem;
+          margin-top: -2.5rem;
+        }
+    
+        .trainers .item .inner .info h4 {
+          font-size: 1rem;
+          font-weight: 600;
+          margin: 0;
+          color: #000;
+        }
+        .trainers .item .inner .info p {
+          font-size: 0.8rem;
+        }
+
+          .trainers .item .inner .info .links a {
+             display: inline-block;
+             width: 2.5rem;
+             height: 2rem;
+             background-color: #FFF;
+             border-radius: 50%;
+             color: #B6C649;
+             text-align: center;
+             line-height: 0.2rem;
+             font-size: 0.9rem;
+         }
+        
+             .trainers .item .inner .info .links a i {
+               margin-top: 8px;
+           }
+
+
+            .pricing_table h1 {
+              font-size: 1.7rem;
+              padding: 0.6rem;
+              display: inline-block;
+              color: #B6C649;
+              border-bottom: 0.3rem solid #B6C649;
+              margin-bottom: 3rem;
+            }
+      
+            .pricing_card .price_box {
+              width: 16rem;
+            }
+      
+}
